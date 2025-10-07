@@ -1,0 +1,95 @@
+/* Fullscreen overlay */
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Dialog box */
+.dialog-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-box.open{
+    animation: fadeIn 0.3s ease-in-out;
+}
+.dialog-box.close{
+    animation: fadeOut 0.3s ease-in-out;
+}
+@keyframes fadeOut {
+  /* 0% = from { */
+  from{
+    transform: scale(1);
+    opacity: 1;
+  }
+  /* 100% = to { */
+  to{ 
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  /* 0% = from { */
+  from{
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  /* 100% = to { */
+  to{ 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Title & content */
+.dialog-box h2 {
+  margin-top: 0;
+}
+
+.dialog-content {
+  margin: 10px 0;
+}
+
+/* Buttons */
+.dialog-actions {
+  text-align: right;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  /* transition: background 0.2s; */
+}
+
+.btn:hover {
+  background: #0056b3;
+  transition: background 0.2s;
+}
+
+.open-btn {
+  margin-top: 50px;
+}
+
+/* Simple fade-in animation */
+
+.app{
+    height:200vh;
+    /* overflow:hidden; */
+}
+.overflow-hidden{
+    overflow:hidden;
+}

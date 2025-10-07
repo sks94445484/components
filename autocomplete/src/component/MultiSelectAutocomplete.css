@@ -1,0 +1,90 @@
+.autocomplete-multi {
+  position: relative;
+  width: 350px;
+  font-family: Arial, sans-serif;
+}
+
+.autocomplete-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 4px;
+  background: white;
+}
+
+.autocomplete-tags {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 4px; */
+  flex: 1;
+}
+
+.tag {
+  background: #e6f0ff;
+  color: #0044cc;
+  padding: 3px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.remove-btn {
+  margin-left: 6px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+}
+
+.remove-btn:hover {
+  color: red;
+}
+
+.autocomplete-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+.edit-icon {
+  margin-left: 8px;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #000;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: calc(100% + 4px);  /*100% is point to imediate outer parent relative component height that is input
+  absolute one is not considered in the calculation*/
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* width: 20px; */
+}
+
+.autocomplete-item {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background: #f0f0f0;
+}
