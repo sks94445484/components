@@ -1,0 +1,64 @@
+
+/* sticky only apply to scrollable's   */
+
+.table-container {
+  /* width: 100%; */
+  width: 500px;
+  max-height: 300px; /* vertical scroll */
+  overflow-x: auto; /* horizontal scroll */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+/* Table structure */
+table {
+    /* default -> border-collapse: separate,
+    collapse will combine both adjacent border and vissually show one border */
+  border-collapse: collapse;
+  /* width: 900px; force horizontal scroll */
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-width: 80px;
+  white-space: nowrap;
+  background: #fff;
+}
+
+/* Sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  /* for to avoid transparent in bg */
+  background: #f5f5f5;
+  z-index: 5;
+}
+
+/* Sticky columns */
+.sticky-col {
+  position: sticky;
+  background: #fff;
+  z-index: 3;
+}
+
+/* Offset positions for sticky columns */
+.left-0 {
+  left: 0;
+  /* for first one */
+}
+
+.left-80 {
+  left: 100px; /* match first column width
+  100 = 80 width + 10 + 10 padding +1+1 border ****
+  */
+}
+
+/* When header cell is both sticky row & col, increase z-index 
+because, 2 two sticky overrides brwser gets confused and staing at the bottom of both z-index
+*/
+th.sticky-col.sticky-header {
+  z-index: 10; /*higher than regular cells*/
+  background: #f5f5f5;
+}
