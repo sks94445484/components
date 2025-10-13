@@ -1,5 +1,9 @@
 
 /* sticky only apply to scrollable's   */
+*{
+    /* box-sizing: border-box; */
+}
+/* for to avoid border flickering while scroll -> give border to child or use box shadow */
 
 .table-container {
   /* width: 100%; */
@@ -34,6 +38,7 @@ td {
   /* for to avoid transparent in bg */
   background: #f5f5f5;
   z-index: 5;
+  /* border-bottom: 1px solid black; */
 }
 
 /* Sticky columns */
@@ -41,6 +46,8 @@ td {
   position: sticky;
   background: #fff;
   z-index: 3;
+  /* border-right: 1px solid black; */
+  box-shadow: 0 0 1px #ccc inset;
 }
 
 /* Offset positions for sticky columns */

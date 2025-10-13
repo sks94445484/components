@@ -20,16 +20,8 @@ const StickyTable = () => {
       <table>
         <thead>
           <tr>
-            <th className="sticky-col left-0 sticky-header"
-                // style={{
-                //     width:"20px",
-                // }}
-            >ID</th>
-            <th className="sticky-col left-80 sticky-header"
-                // style={{
-                //     width:"50px",
-                // }}
-            >Name</th>
+            <th className="sticky-col left-0 sticky-header" >ID</th>
+            <th className="sticky-col left-80 sticky-header" >Name</th>
             <th className="sticky-header">Age</th>
             <th className="sticky-header">City</th>
             <th className="sticky-header">Country</th>
