@@ -6,12 +6,15 @@
 /* for to avoid border flickering while scroll -> give border to child or use box shadow */
 
 .table-container {
-  /* width: 100%; */
-  width: 500px;
-  max-height: 300px; /* vertical scroll */
+  width: 100%;
+  /* width: 500px; */
+  /* max-height: 300px; vertical scroll */
+  /* height: 100%; */
   overflow-x: auto; /* horizontal scroll */
   overflow-y: auto;
   border: 1px solid #ccc;
+  /* position: sticky;
+  top:0; */
 }
 
 /* Table structure */
@@ -20,6 +23,13 @@ table {
     collapse will combine both adjacent border and vissually show one border */
   border-collapse: collapse;
   /* width: 900px; force horizontal scroll */
+}
+
+tr.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background: #f5f5f5;
 }
 
 th,
